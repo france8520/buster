@@ -1,13 +1,24 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bangkok Smart Route</title>
+=======
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with HERE Maps - ภาษาไทยและระบบนำทาง</title>
+
+    <!-- HERE Maps API -->
+>>>>>>> 7b4742c (fix map track)
     <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
     <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
     <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
     <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+<<<<<<< HEAD
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&libraries=places"></script>
     <link rel="stylesheet" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
@@ -441,3 +452,29 @@
 </body>
 </html>
 
+=======
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+
+    <!-- CSS สำหรับแผนที่และฟอร์ม -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- พื้นที่สำหรับแผนที่ -->
+    <div id="mapContainer"></div>
+
+    <!-- ฟอร์มสำหรับใส่ต้นทางและปลายทาง -->
+    <div id="route-form">
+        <label for="start">ต้นทาง:</label>
+        <input type="text" id="start" placeholder="พิมพ์สถานที่ต้นทาง">
+        
+        <label for="end">ปลายทาง:</label>
+        <input type="text" id="end" placeholder="พิมพ์สถานที่ปลายทาง">
+        
+        <button onclick="calculateRoute()">ค้นหาเส้นทาง</button>
+    </div>
+
+    <!-- สคริปต์หลักสำหรับการทำงานของแอพพลิเคชัน -->
+    <script src="app.js"></script>
+</body>
+</html>
+>>>>>>> 7b4742c (fix map track)
