@@ -104,3 +104,69 @@ function displayRouteInfo(route) {
     
     document.getElementById('routeInfo').appendChild(routeInfo);
 }
+
+const routeOptions = {
+    modes: [
+        {
+            type: ['car'],
+            maxDistance: 50000,
+            trafficWeight: 0.8,
+            rushHourPenalty: true
+        },
+        {
+            type: ['pedestrian'],
+            maxDistance: 2000,
+            weatherWeight: 0.9
+        },
+        {
+            type: ['bts'],
+            nearStations: true,
+            peakHourBonus: true
+        },
+        {
+            type: ['train'],
+            nearStations: true,
+            scheduleDependent: true
+        },
+        {
+            type: ['bus'],
+            nearStops: true,
+            trafficWeight: 0.7
+        },
+        // ผสมผสานแบบ 2 ประเภท
+        {
+            type: ['pedestrian', 'bts'],
+            maxDistance: 3000,
+            connectionWeight: 0.9
+        },
+        {
+            type: ['bus', 'bts'],
+            transferWeight: 0.8
+        },
+        {
+            type: ['pedestrian', 'train'],
+            maxDistance: 3000
+        },
+        {
+            type: ['bus', 'train'],
+            transferTime: true
+        },
+        // ผสมผสานแบบ 3 ประเภท
+        {
+            type: ['pedestrian', 'bus', 'bts'],
+            optimalTransfer: true
+        },
+        {
+            type: ['bus', 'train', 'bts'],
+            multiTransfer: true
+        },
+        {
+            type: ['car', 'train', 'bus'],
+            parkAndRide: true
+        }
+    ],
+    timeOfDay: new Date(),
+    trafficConditions: true,
+    weatherConditions: true,
+    costOptimization: true
+};

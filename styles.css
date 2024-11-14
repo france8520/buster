@@ -5,27 +5,104 @@
 }
 
 /* สไตล์สำหรับฟอร์มการค้นหาเส้นทาง */
-#route-form {
+.route-container {
+    position: fixed;
+    width: 320px;
+    height: 100px;
+    left: 50%;
+    top: 63px;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.location-marker {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 999;
+    width: 12px;
+    height: 12px;
+    left: 25px;
+    border-radius: 90px;
 }
 
-#route-form label {
-    margin-right: 5px;
+.start-marker {
+    top: 30px;
+    background: #FEED30;
 }
 
-#route-form input {
-    margin-bottom: 5px;
-    width: 200px;
+.end-marker {
+    top: 80px;
+    background: #FF4444;
+}
+  .dot-connector {
+      position: absolute;
+      left: 29px;
+      width: 4px;
+      height: 4px;
+      background: rgba(159, 159, 159, 0.25);
+      border-radius: 90px;
+  }
+
+  .dot-1 { top: 45px; }
+  .dot-2 { top: 55px; }
+  .dot-3 { top: 65px; }
+
+  .location-marker {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 90px;
+  }
+
+  .end-location-marker {
+      left: 60px;
+      top: 80px;
+      background: #FF4444;
+  }
+
+  .input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+  }
+
+  .input-field {
+      position: absolute;
+      width: 240px;
+      height: 35px;
+      left: 60px;
+      background: #EDEDED;
+    border-radius: 20px;
+    border: none;
+    padding: 0 14px;
+    font-family: 'IBM Plex Sans Thai';
+    font-size: 12px;
+    color: #747474;
 }
 
-#route-form button {
-    margin-top: 5px;
-    padding: 5px 10px;
+.start-input { top: 20px; }
+.end-input { top: 70px; }
+
+.location-markers {
+    position: absolute;
+    left: 32px;
+    top: 82px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+.search-button {
+    position: absolute;
+    right: 20px;
+    bottom: -45px;
+    padding: 8px 16px;
+    background: #FEED30;
+    border: none;
+    border-radius: 20px;
+    font-family: 'IBM Plex Sans Thai';
+    font-size: 14px;
+    cursor: pointer;
 }
